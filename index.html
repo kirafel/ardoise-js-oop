@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+
+    <script
+      src="https://kit.fontawesome.com/47cf7cf42c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/class/Pen.class.js"></script>
+    <script src="js/class/Slate.class.js"></script>
+    <script src="js/class/Palette.class.js"></script>
+    <script src="js/class/Program.class.js"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1><i class="fa fa-paint-brush"></i> Ardoise Magique ;-)</h1>
+
+    <main>
+      <canvas id="slate" class="slate" width="600" height="300"></canvas>
+      <canvas
+        id="color-palette"
+        class="color-palette hide"
+        width="256"
+        height="256"
+      ></canvas>
+    </main>
+
+    <hr />
+    <nav class="toolbar">
+      <ul>
+        <li class="first-li">
+          <label>Outils</label>
+          <button id="tool-clear-brush" title="Paint">
+            <i class="fa fa-paint-brush"></i>
+          </button>
+          <button id="tool-color-star" title="Star">
+            <i class="fa fa-star"></i>
+          </button>
+          <button id="tool-color-erase" title="Erase">
+            <i class="fa fa-square"></i>
+          </button>
+          <button id="tool-color-picker" title="Pipette">
+            <i class="fa fa-eyedropper"></i>
+          </button>
+          <button id="tool-clear-canvas" title="Effacer">
+            <i class="fa fa-eraser"></i>
+          </button>
+        </li>
+        <li class="second-li">
+          <label>Couleur</label>
+          <div class="pen-color default selected" data-color="#ccc"></div>
+          <div class="pen-color black" data-color="black"></div>
+          <div class="pen-color maroon" data-color="#5C2121"></div>
+          <div class="pen-color red" data-color="#B9121B"></div>
+          <div class="pen-color yellow" data-color="#FFBD07"></div>
+          <div class="pen-color green" data-color="#13B813"></div>
+          <div class="pen-color seagreen" data-color="#029E9A"></div>
+          <div class="pen-color blue" data-color="#0378A6"></div>
+
+          <input type="color" class="add" id="colorWell" />
+        </li>
+        <li class="third-li">
+          <label>Epaisseur</label>
+          <button class="pen-size" data-size="2">Fin</button>
+          <button class="pen-size" data-size="4">Normal</button>
+          <button class="pen-size" data-size="6">Epais</button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Code principal -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
